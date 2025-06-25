@@ -151,7 +151,7 @@ export default function Hero() {
           <Button
             onClick={scrollToNext}
             variant="outline"
-            className="flex flex-col items-center gap-0 py-6 border-main/40 bg-main/10 hover:bg-main/20  rounded-2xl shadow-lg backdrop-blur-lg transition-all group"
+            className="flex flex-col items-center gap-0 py-6 border-main/40 bg-main/10 hover:bg-main/20  rounded-2xl shadow-lg backdrop-blur-lg transition-all group cursor-pointer"
             aria-label="Scroll Down"
           >
             <span className="text-sm font-semibold text-main group-hover:text-main/80 transition-colors tracking-wider uppercase">

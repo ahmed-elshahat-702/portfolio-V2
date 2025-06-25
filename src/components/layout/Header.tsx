@@ -99,15 +99,15 @@ const Header = () => {
               href={item.href}
               className={`relative flex flex-col items-center px-3 py-1.5 capitalize transition-colors duration-200 ${
                 activeSection === item.key
-                  ? "text-blue-600"
-                  : "text-gray-700 dark:text-gray-300 hover:text-blue-500"
+                  ? "text-main"
+                  : "text-gray-700 dark:text-gray-300 hover:text-main/80"
               }`}
               aria-current={activeSection === item.key ? "page" : undefined}
             >
               <span className="relative inline-block">
                 {item.key}
                 {activeSection === item.key && (
-                  <span className="absolute left-1/2 -bottom-1.5 -translate-x-1/2 w-6 h-1 bg-blue-600 rounded-full" />
+                  <span className="absolute left-1/2 -bottom-1.5 -translate-x-1/2 w-6 h-1 bg-main rounded-full" />
                 )}
               </span>
             </Link>
@@ -130,17 +130,17 @@ const Header = () => {
             <span
               className={`block h-0.5 w-6 transition-transform duration-300 ${
                 isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-              } ${isScrolled ? "bg-blue-600" : "bg-gray-800 dark:bg-white"}`}
+              } ${isScrolled ? "bg-main" : "bg-gray-800 dark:bg-white"}`}
             />
             <span
               className={`block h-0.5 w-6 my-1 transition-opacity duration-300 ${
                 isMobileMenuOpen ? "opacity-0" : ""
-              } ${isScrolled ? "bg-blue-600" : "bg-gray-800 dark:bg-white"}`}
+              } ${isScrolled ? "bg-main" : "bg-gray-800 dark:bg-white"}`}
             />
             <span
               className={`block h-0.5 w-6 transition-transform duration-300 ${
                 isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-              } ${isScrolled ? "bg-blue-600" : "bg-gray-800 dark:bg-white"}`}
+              } ${isScrolled ? "bg-main" : "bg-gray-800 dark:bg-white"}`}
             />
           </button>
         </div>
@@ -156,15 +156,15 @@ const Header = () => {
                   href={item.href}
                   className={`relative px-3 py-2 capitalize rounded transition-colors duration-200 ${
                     activeSection === item.key
-                      ? "text-blue-600"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-500 hover:bg-gray-100 dark:hover:bg-gray-800"
+                      ? "text-main"
+                      : "text-gray-700 dark:text-gray-300 hover:text-main/80 hover:bg-gray-100 dark:hover:bg-gray-800"
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <span className="relative inline-block">
                     {item.key}
                     {activeSection === item.key && (
-                      <span className="absolute left-1/2 -bottom-1.5 -translate-x-1/2 w-6 h-1 bg-blue-600 rounded-full" />
+                      <span className="absolute left-1/2 -bottom-1.5 -translate-x-1/2 w-6 h-1 bg-main rounded-full" />
                     )}
                   </span>
                 </Link>

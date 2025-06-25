@@ -229,7 +229,7 @@ export function StatsSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Card className="border-0 bg-gradient-to-br from-main/10 to-primary/10 backdrop-blur-xl shadow-lg max-w-4xl mx-auto">
+          <Card className="border-0 bg-gradient-to-br from-main/10 to-background/10 backdrop-blur-xl shadow-lg max-w-4xl mx-auto">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">
                 Continuous Growth & Learning

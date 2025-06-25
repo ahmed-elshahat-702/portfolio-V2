@@ -113,7 +113,7 @@ export default function Hero() {
                 className="relative w-60 md:w-80 h-60 md:h-80 rounded-full overflow-hidden border-4 border-main/20 shadow-2xl backdrop-blur-sm bg-gradient-to-br from-main/10 to-transparent"
               >
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/avatar.png"
                   alt="Ahmed - Full Stack Developer"
                   fill
                   className="w-full h-full object-cover"

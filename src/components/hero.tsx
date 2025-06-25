@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Download, Eye, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { BackgroundElements } from "./layout/background-elements";
+import { BackgroundElements } from "./background-elements";
 import { TypewriterAnimation } from "./typewriter-animation";
 
 export default function Hero() {
@@ -17,7 +17,10 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       <BackgroundElements />
 
       <div className="container mx-auto px-4 py-20 relative z-10">

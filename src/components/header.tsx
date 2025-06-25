@@ -6,13 +6,16 @@ import { useEffect, useState } from "react";
 import { ModeToggler } from "./mode-toggler";
 
 const navItems = [
-  { key: "home", href: "/" },
-  { key: "about", href: "/about" },
-  { key: "projects", href: "/projects" },
-  { key: "skills", href: "/skills" },
-  { key: "resume", href: "/resume" },
-  { key: "certificates", href: "/certificates" },
-  { key: "contact", href: "/contact" },
+  { key: "home", href: "#home" },
+  { key: "about", href: "#about" },
+  // { key: "stats", href: "#stats" },
+  { key: "services", href: "#services" },
+  // { key: "process", href: "#process" },
+  { key: "projects", href: "#projects" },
+  // { key: "testimonials", href: "#testimonials" },
+  { key: "cv", href: "#cv" },
+  { key: "certificates", href: "#certificates" },
+  { key: "contact", href: "#contact" },
 ];
 
 const Header = () => {
@@ -159,7 +162,20 @@ const Header = () => {
                       ? "text-main"
                       : "text-gray-700 dark:text-gray-300 hover:text-main/80 hover:bg-gray-100 dark:hover:bg-gray-800"
                   }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  scroll={false}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    const section = document.getElementById(item.key);
+                    if (section) {
+                      section.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    } else if (item.href === "#") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
                 >
                   <span className="relative inline-block">
                     {item.key}

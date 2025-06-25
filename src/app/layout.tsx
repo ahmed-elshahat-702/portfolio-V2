@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Cairo, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import { Footer } from "@/components/footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -43,10 +44,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="w-full flex min-h-screen">
+          <main className="w-full max-w-screen min-h-screen overflow-x-hidden">
             <Header />
-            {/* Main content area */}
             {children}
+            <Footer />
           </main>
         </ThemeProvider>
       </body>

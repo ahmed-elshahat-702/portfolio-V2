@@ -1,4 +1,6 @@
 import { AboutSection } from "@/components/about-section";
+import { CertificatesSection } from "@/components/certificates-section";
+import { ContactSection } from "@/components/contact-section";
 import { CVSection } from "@/components/cv-section";
 import Hero from "@/components/hero";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
@@ -19,6 +21,8 @@ export default function Home() {
       <ProjectsSection />
       <TestimonialsSection />
       <CVSection />
+      <CertificatesSection />
+      <ContactSection />
     </MaxWidthWrapper>
   );
 }

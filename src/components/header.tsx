@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ModeToggler } from "../mode-toggler";
+import { ModeToggler } from "./mode-toggler";
 
 const navItems = [
   { key: "home", href: "/" },

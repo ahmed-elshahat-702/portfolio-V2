@@ -1,5 +1,5 @@
 import { AboutSection } from "@/components/about-section";
-import { CertificatesSection } from "@/components/certificates-section";
+// import { CertificatesSection } from "@/components/certificates-section";
 import { ContactSection } from "@/components/contact-section";
 import { CVSection } from "@/components/cv-section";
 import Hero from "@/components/hero";
@@ -8,7 +8,7 @@ import { ProcessSection } from "@/components/process-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { ServicesSection } from "@/components/services-section";
 import { StatsSection } from "@/components/stats-section";
-import { TestimonialsSection } from "@/components/testimonials-section";
+// import { TestimonialsSection } from "@/components/testimonials-section";
 
 export default function Home() {
   return (
@@ -19,9 +19,9 @@ export default function Home() {
       <ServicesSection />
       <ProcessSection />
       <ProjectsSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CVSection />
-      <CertificatesSection />
+      {/* <CertificatesSection /> */}
       <ContactSection />
     </MaxWidthWrapper>
   );

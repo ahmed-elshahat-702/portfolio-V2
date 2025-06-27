@@ -1,18 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Code,
-  Users,
-  Award,
-  Clock,
-  Coffee,
-  Github,
-  Star,
-  Zap,
-} from "lucide-react";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Award, Clock, Code, Coffee, Github, Zap } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const stats = [
   {
@@ -24,19 +15,19 @@ const stats = [
     color: "from-blue-500 to-blue-600",
     description: "Clean, maintainable code written",
   },
-  {
-    id: 2,
-    label: "Happy Clients",
-    value: 30,
-    suffix: "+",
-    icon: Users,
-    color: "from-green-500 to-green-600",
-    description: "Satisfied clients worldwide",
-  },
+  // {
+  //   id: 2,
+  //   label: "Happy Clients",
+  //   value: 30,
+  //   suffix: "+",
+  //   icon: Users,
+  //   color: "from-green-500 to-green-600",
+  //   description: "Satisfied clients worldwide",
+  // },
   {
     id: 3,
     label: "Projects Completed",
-    value: 50,
+    value: 6,
     suffix: "+",
     icon: Award,
     color: "from-purple-500 to-purple-600",
@@ -45,7 +36,7 @@ const stats = [
   {
     id: 4,
     label: "Years Experience",
-    value: 5,
+    value: 4,
     suffix: "+",
     icon: Clock,
     color: "from-orange-500 to-orange-600",
@@ -54,7 +45,7 @@ const stats = [
   {
     id: 5,
     label: "Cups of Coffee",
-    value: 1500,
+    value: 200,
     suffix: "+",
     icon: Coffee,
     color: "from-amber-500 to-amber-600",
@@ -63,21 +54,21 @@ const stats = [
   {
     id: 6,
     label: "GitHub Commits",
-    value: 2000,
+    value: 500,
     suffix: "+",
     icon: Github,
     color: "from-gray-500 to-gray-600",
     description: "Contributions to open source",
   },
-  {
-    id: 7,
-    label: "5-Star Reviews",
-    value: 28,
-    suffix: "",
-    icon: Star,
-    color: "from-yellow-500 to-yellow-600",
-    description: "Excellent client feedback",
-  },
+  // {
+  //   id: 7,
+  //   label: "5-Star Reviews",
+  //   value: 28,
+  //   suffix: "",
+  //   icon: Star,
+  //   color: "from-yellow-500 to-yellow-600",
+  //   description: "Excellent client feedback",
+  // },
   {
     id: 8,
     label: "Technologies Mastered",

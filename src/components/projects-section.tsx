@@ -1,84 +1,56 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Star } from "lucide-react";
 // import { useLanguage } from "@/components/language-provider"
 import Image from "next/image";
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Recipe Hub",
     description:
-      "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-    github: "https://github.com/ahmed/ecommerce",
-    demo: "https://ecommerce-demo.com",
+      "A comprehensive full-stack recipe management platform with user authentication, recipe sharing, and advanced search features.",
+    image: "/projects/recipe-hub.png?height=300&width=400",
+    technologies: ["Next", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/ahmed-elshahat-702/recipe-hub",
+    demo: "https://bondok-recipe-hub.vercel.app",
     featured: true,
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "Random Advice",
     description:
-      "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Prisma",
-      "PostgreSQL",
-      "Socket.io",
-    ],
-    github: "https://github.com/ahmed/taskmanager",
-    demo: "https://taskmanager-demo.com",
-    featured: true,
+      "A simple yet effective web application that fetches and displays random advice using the Advice Slip API.",
+    image: "/projects/random-advice.png?height=300&width=400",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/ahmed-elshahat-702/random-advice-generator",
+    demo: "https://bondok-random-advice.vercel.app",
+    featured: false,
   },
   {
     id: 3,
-    title: "Weather Dashboard",
+    title: "Hangman Game",
     description:
-      "Beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React", "Chart.js", "OpenWeather API", "Mapbox"],
-    github: "https://github.com/ahmed/weather-dashboard",
-    demo: "https://weather-dashboard-demo.com",
+      "A classic word-guessing game where players try to guess a hidden word by suggesting letters within a certain number of guesses.",
+    image: "/projects/hangman-game.png?height=300&width=400",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/ahmed-elshahat-702/hang-man",
+    demo: "https://bondok-hang-man.vercel.app/",
     featured: false,
   },
   {
     id: 4,
-    title: "Social Media Analytics",
+    title: "Age Calculator",
     description:
-      "Analytics dashboard for social media metrics with data visualization and automated reporting features.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Vue.js", "D3.js", "Python", "FastAPI", "Redis"],
-    github: "https://github.com/ahmed/social-analytics",
-    demo: "https://social-analytics-demo.com",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Learning Management System",
-    description:
-      "Complete LMS with course creation, student progress tracking, and interactive learning modules.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Next.js", "Supabase", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/ahmed/lms",
-    demo: "https://lms-demo.com",
-    featured: true,
-  },
-  {
-    id: 6,
-    title: "Crypto Portfolio Tracker",
-    description:
-      "Real-time cryptocurrency portfolio tracking with price alerts and market analysis tools.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React Native", "Redux", "CoinGecko API", "Firebase"],
-    github: "https://github.com/ahmed/crypto-tracker",
-    demo: "https://crypto-tracker-demo.com",
+      "A simple web application that calculates a person's age based on their date of birth, providing an easy way to find out how old you are.",
+    image: "/projects/age-calculator.png?height=300&width=400",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/ahmed-elshahat-702/age-calculator",
+    demo: "https://bondok-age-calculator.vercel.app/",
     featured: false,
   },
 ];
@@ -190,7 +162,7 @@ export function ProjectsSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="pt-0 group hover:shadow-xl transition-all duration-300 border-main/10 hover:border-main/30 h-full">
+                <Card className="pt-0 group hover:shadow-xl transition-all duration-300 border-main/10 hover:border-main/30 h-full overflow-hidden">
                   <div className="relative overflow-hidden">
                     <Image
                       src={project.image || "/placeholder.svg"}

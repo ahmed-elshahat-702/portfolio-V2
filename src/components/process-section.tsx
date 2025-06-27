@@ -19,7 +19,7 @@ const processSteps = [
     id: 1,
     title: "Discovery & Planning",
     description:
-      "We start with understanding your goals, requirements, and target audience to create a solid foundation.",
+      "I start with understanding your goals, requirements, and target audience to create a solid foundation.",
     icon: MessageCircle,
     color: "from-blue-500 to-blue-600",
     details: [
@@ -33,7 +33,7 @@ const processSteps = [
     id: 2,
     title: "Design & Prototyping",
     description:
-      "Creating wireframes, mockups, and interactive prototypes to visualize the final product.",
+      "Creating intuitive and engaging designs that align with your brand and user needs.",
     icon: Lightbulb,
     color: "from-purple-500 to-purple-600",
     details: [

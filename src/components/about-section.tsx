@@ -1,59 +1,89 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, GraduationCap, Briefcase } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { Calendar, Earth, Pen, Server } from "lucide-react";
 
 const stats = [
-  { key: "about.experience", value: "5+", icon: Briefcase },
-  { key: "about.projects", value: "50+", icon: GraduationCap },
-  { key: "about.clients", value: "30+", icon: MapPin },
+  { key: "Front-End", value: "4+", icon: Earth },
+  { key: "Full-stack", value: "2+", icon: Server },
+  { key: "Logo Design", value: "2+", icon: Pen },
+  // { key: "experience", value: "5+", icon: Briefcase },
+  // { key: "projects", value: "6+", icon: GraduationCap },
+  // { key: "clients", value: "30+", icon: MapPin },
 ];
 
 const timeline = [
   {
-    year: "2024",
-    title: "Senior Full Stack Developer",
-    company: "Tech Solutions Inc.",
+    year: "2026",
+    title: "Nursing",
+    company: "New Ismaillia National University",
     type: "work",
     description:
-      "Leading development of enterprise web applications using React, Node.js, and cloud technologies.",
+      "Graduated with a Bachelor's degree in Nursing, focusing on patient care and healthcare management.",
+  },
+  {
+    year: "2025",
+    title: "Logo Designer",
+    company: "Online",
+    type: "work",
+    description:
+      "Designed logos for various clients, focusing on brand identity and visual appeal.",
+  },
+  {
+    year: "2024",
+    title: "Full Stack Developer",
+    company: "Online",
+    type: "work",
+    description:
+      "Leading development of enterprise web applications using React,, Next, and Node.js.",
   },
   {
     year: "2023",
-    title: "Full Stack Developer",
-    company: "Digital Agency",
+    title: "Back-End Developer",
+    company: "Online",
+    type: "education",
+    description:
+      "Focused on building scalable backend systems with Node.js and Express.",
+  },
+  {
+    year: "2023",
+    title: "Frontend Developer",
+    company: "Online",
     type: "work",
     description:
-      "Developed and maintained multiple client projects using modern web technologies.",
+      "Specialized in React, Next development and UI/UX implementation.",
   },
   {
     year: "2022",
-    title: "Frontend Developer",
-    company: "Startup Hub",
+    title: "Basic web development fundamentals",
+    company: "Online",
     type: "work",
-    description: "Specialized in React development and UI/UX implementation.",
-  },
-  {
-    year: "2021",
-    title: "Computer Science Degree",
-    company: "University of Technology",
-    type: "education",
     description:
-      "Bachelor's degree in Computer Science with focus on software engineering.",
+      "Completed courses in HTML, CSS, and JavaScript to build a solid foundation in web development.",
   },
 ];
 
 const skills = [
-  { name: "React", level: 95, category: "Frontend" },
+  { name: "Next.js", level: 90, category: "Frontend" },
+  { name: "React", level: 85, category: "Frontend" },
   { name: "TypeScript", level: 90, category: "Frontend" },
-  { name: "Next.js", level: 88, category: "Frontend" },
-  { name: "Node.js", level: 85, category: "Backend" },
-  { name: "MongoDB", level: 80, category: "Database" },
-  { name: "PostgreSQL", level: 75, category: "Database" },
-  { name: "AWS", level: 70, category: "Cloud" },
-  { name: "Docker", level: 75, category: "DevOps" },
+  { name: "Node.js", level: 75, category: "Backend" },
+  { name: "MongoDB", level: 90, category: "Database" },
+  { name: "Express.js", level: 95, category: "Backend" },
+  { name: "Bootstrap", level: 90, category: "Styling" },
+  { name: "Tailwind CSS", level: 90, category: "Styling" },
+  { name: "HTML", level: 90, category: "Frontend" },
+  { name: "CSS", level: 90, category: "Frontend" },
+  { name: "JavaScript", level: 90, category: "Frontend" },
+  { name: "Git", level: 80, category: "Version Control" },
+  { name: "Github", level: 80, category: "Version Control" },
+  { name: "Nursing", level: 80, category: "Other" },
+  // { name: "Python", level: 80, category: "Programming Language" },
+  // { name: "PostgreSQL", level: 75, category: "Database" },
+  // { name: "AWS", level: 70, category: "Cloud" },
+  // { name: "Docker", level: 75, category: "DevOps" },
 ];
 
 export function AboutSection() {

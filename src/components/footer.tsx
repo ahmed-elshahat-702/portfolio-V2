@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 // import { useLanguage } from "@/components/language-provider"
-import { Heart, Code } from "lucide-react";
-import Image from "next/image";
+import { Code, Heart } from "lucide-react";
+import Logo from "./layout/logo";
 
 export function Footer() {
   // const { t } = useLanguage()
@@ -20,14 +20,7 @@ export function Footer() {
           className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto"
         >
           <div className="flex items-center gap-2 text-2xl font-bold text-main">
-            <div className="relative w-10 h-10">
-              <Image
-                src="/placeholder-logo.png"
-                alt="Logo"
-                fill
-                className="rounded-full object-cover border-2 border-white shadow"
-              />
-            </div>
+            <Logo />
             Ahmed
           </div>
           <span className="hidden md:inline-block text-muted-foreground">

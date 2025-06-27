@@ -51,8 +51,8 @@ export default function Hero() {
                 className="text-xl text-muted-foreground leading-relaxed max-w-2xl"
               >
                 Passionate about creating modern web applications with
-                cutting-edge technologies. Specialized in React, Node.js, and
-                cloud solutions.
+                cutting-edge technologies. Specialized in React, Next, and
+                Node.js.
               </motion.p>
 
               <motion.div
@@ -66,7 +66,7 @@ export default function Hero() {
                   size="lg"
                   className="font-semibold px-8 py-6 text-lg rounded-2xl group"
                 >
-                  <Link href="/projects">
+                  <Link href="#projects">
                     <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                     View Projects
                   </Link>
@@ -79,7 +79,7 @@ export default function Hero() {
                   className="font-semibold px-8 py-6 text-lg rounded-2xl group"
                 >
                   <Link
-                    href="/cv-ahmed-en.pdf"
+                    href="/cv-en.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

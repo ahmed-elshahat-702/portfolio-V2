@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Logo from "./layout/logo";
 import { ModeToggler } from "./mode-toggler";
 
 const navItems = [
@@ -13,7 +13,7 @@ const navItems = [
   // { key: "process", href: "#process" },
   { key: "projects", href: "#projects" },
   // { key: "testimonials", href: "#testimonials" },
-  { key: "cv", href: "#cv" },
+  { key: "CV", href: "#cv" },
   { key: "certificates", href: "#certificates" },
   { key: "contact", href: "#contact" },
 ];
@@ -83,14 +83,7 @@ const Header = () => {
           href="/"
           className="flex items-center gap-2 select-none text-2xl font-bold"
         >
-          <div className="relative w-10 h-10">
-            <Image
-              src="/placeholder-logo.png"
-              alt="Logo"
-              fill
-              className="rounded-full object-cover border-2 border-white shadow"
-            />
-          </div>
+          <Logo />
           Ahmed
         </Link>
 

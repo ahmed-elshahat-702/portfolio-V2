@@ -1,22 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Code,
-  Server,
-  Palette,
-  Smartphone,
-  Cloud,
-  Database,
-} from "lucide-react";
+import { motion } from "framer-motion";
+import { Code, Earth, Palette, Server } from "lucide-react";
 
 const services = [
   {
-    icon: Code,
+    icon: Earth,
     title: "Web Development",
     titleKey: "services.frontend.title",
     desc: "Full-stack web development using React, Next.js, and modern web technologies",
+    descKey: "services.frontend.desc",
+    color: "text-blue-500",
+    bgColor: "bg-blue-500/10",
+  },
+  {
+    icon: Code,
+    title: "Front-End Development",
+    titleKey: "services.frontend.title",
+    desc: "Building responsive and interactive user interfaces with React and modern front-end technologies.",
     descKey: "services.frontend.desc",
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
@@ -32,40 +34,40 @@ const services = [
   },
   {
     icon: Palette,
-    title: "UI/UX Design",
-    titleKey: "services.uiux.title",
-    desc: "Intuitive and engaging user interfaces with a focus on user experience",
-    descKey: "services.uiux.desc",
+    title: "Logo Design",
+    titleKey: "services.logo.title",
+    desc: "Creative logo designs that capture your brand's essence and identity.",
+    descKey: "services.logo.desc",
     color: "text-purple-500",
     bgColor: "bg-purple-500/10",
   },
-  {
-    icon: Smartphone,
-    title: "Mobile Development",
-    titleKey: "services.mobile.title",
-    desc: "Cross-platform mobile applications using React Native and modern mobile technologies",
-    descKey: "services.mobile.desc",
-    color: "text-pink-500",
-    bgColor: "bg-pink-500/10",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Solutions",
-    titleKey: "services.cloud.title",
-    desc: "Scalable cloud infrastructure and deployment using AWS, Vercel, and other cloud platforms",
-    descKey: "services.cloud.desc",
-    color: "text-orange-500",
-    bgColor: "bg-orange-500/10",
-  },
-  {
-    icon: Database,
-    title: "Database Design",
-    titleKey: "services.database.title",
-    desc: "Efficient database architecture and optimization for both SQL and NoSQL databases",
-    descKey: "services.database.desc",
-    color: "text-cyan-500",
-    bgColor: "bg-cyan-500/10",
-  },
+  // {
+  //   icon: Smartphone,
+  //   title: "Mobile Development",
+  //   titleKey: "services.mobile.title",
+  //   desc: "Cross-platform mobile applications using React Native and modern mobile technologies",
+  //   descKey: "services.mobile.desc",
+  //   color: "text-pink-500",
+  //   bgColor: "bg-pink-500/10",
+  // },
+  // {
+  //   icon: Cloud,
+  //   title: "Cloud Solutions",
+  //   titleKey: "services.cloud.title",
+  //   desc: "Scalable cloud infrastructure and deployment using AWS, Vercel, and other cloud platforms",
+  //   descKey: "services.cloud.desc",
+  //   color: "text-orange-500",
+  //   bgColor: "bg-orange-500/10",
+  // },
+  // {
+  //   icon: Database,
+  //   title: "Database Design",
+  //   titleKey: "services.database.title",
+  //   desc: "Efficient database architecture and optimization for both SQL and NoSQL databases",
+  //   descKey: "services.database.desc",
+  //   color: "text-cyan-500",
+  //   bgColor: "bg-cyan-500/10",
+  // },
 ];
 
 export function ServicesSection() {

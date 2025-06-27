@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const titles = [
   "Full-stack Developer",
-  "UI/UX Designer",
+  "Logo Designer",
   "Problem Solver",
   "Creative Thinker",
-  "Tech Enthusiast",
+  "Nurse",
 ];
 
 export function TypewriterAnimation() {

@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Cairo, Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const cairo = Cairo({ subsets: ["arabic"], variable: "--font-cairo" });
@@ -36,6 +37,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </main>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

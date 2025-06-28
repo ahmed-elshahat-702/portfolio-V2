@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-// import { useLanguage } from "@/components/language-provider"
+import { useLanguage } from "@/components/layout/language-provider";
 import { Code, Heart } from "lucide-react";
 import Logo from "./layout/logo";
 
 export function Footer() {
-  // const { t } = useLanguage()
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -21,12 +21,11 @@ export function Footer() {
         >
           {/* Logo */}
           <Logo />
-
           <span className="hidden md:inline-block text-muted-foreground">
             |
           </span>
           <p className="text-muted-foreground text-center md:text-left text-sm max-w-xs">
-            Building modern web experiences with passion & innovation.
+            {t("footer.description")}
           </p>
         </motion.div>
         <motion.div
@@ -37,13 +36,15 @@ export function Footer() {
           className="flex flex-col md:items-end items-center gap-2 text-xs text-muted-foreground"
         >
           <div className="flex items-center gap-1">
-            <span>© {currentYear} Ahmed.</span>
-            <span className="hidden md:inline">All rights reserved.</span>
+            <span>
+              © {currentYear} {t("footer.author")}
+            </span>
+            <span className="hidden md:inline">{t("footer.rights")}</span>
           </div>
           <div className="flex items-center gap-1">
-            <span>Built with</span>
+            <span>{t("footer.built")}</span>
             <Heart className="h-4 w-4 text-red-500" />
-            <span>and</span>
+            <span>{t("footer.and")}</span>
             <Code className="h-4 w-4 text-main" />
           </div>
         </motion.div>

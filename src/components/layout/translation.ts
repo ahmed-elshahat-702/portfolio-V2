@@ -265,8 +265,12 @@ export const translations = {
     "contact.form.success": "Message sent successfully!",
     "contact.form.error": "Failed to send message. Please try again.",
     // Footer
+    "footer.description":
+      "Building modern web experiences with passion & innovation.",
     "footer.rights": "All rights reserved.",
+    "footer.author": "Ahmed Elshahat",
     "footer.built": "Built with",
+    "footer.and": "and",
   },
   ar: {
     // Mode
@@ -529,7 +533,10 @@ export const translations = {
     "contact.form.error": "فشل في إرسال الرسالة. يرجى المحاولة مرة أخرى.",
 
     // Footer
+    "footer.description": "بناء تجارب ويب حديثة بشغف وابتكار.",
+    "footer.author": "أحمد الشحات",
     "footer.rights": "جميع الحقوق محفوظة.",
     "footer.built": "تم البناء باستخدام",
+    "footer.and": "و",
   },
 };

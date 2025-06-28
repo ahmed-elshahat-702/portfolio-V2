@@ -15,12 +15,14 @@ import {
   Send,
   CheckCircle,
   XCircle,
+  Loader2,
 } from "lucide-react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
+import { useLanguage } from "./layout/language-provider";
 
 // Zod schema for form validation
 const formSchema = z.object({
@@ -56,19 +58,19 @@ const WhatsappIcon = () => (
 const contactInfo = [
   {
     icon: Mail,
-    label: "Email",
+    label: (t: (key: string) => string) => t("contact.info.email"),
     value: "ahmedelshahat702@gmail.com",
-    href: "mailto:ahmed@gmail.com",
+    href: "mailto:ahmedelshahat702@gmail.com",
   },
   {
     icon: Phone,
-    label: "Phone",
+    label: (t: (key: string) => string) => t("contact.info.phone"),
     value: "+20 1144378220",
     href: "tel:+201144378220",
   },
   {
     icon: WhatsappIcon,
-    label: "Whatsapp",
+    label: (t: (key: string) => string) => t("contact.info.whatsapp"),
     value: "+20 1144378220",
     href: "https://wa.me/201144378220",
   },
@@ -96,6 +98,8 @@ const socialLinks = [
 ];
 
 export function ContactSection() {
+  const { t } = useLanguage();
+
   const {
     register,
     handleSubmit,
@@ -124,13 +128,13 @@ export function ContactSection() {
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
-      toast("Message sent successfully!", {
+      toast(t("contact.form.success"), {
         icon: <CheckCircle className="w-4 h-4" />,
       });
       reset();
     } catch (error) {
       console.error("EmailJS error:", error);
-      toast("Failed to send message. Please try again.", {
+      toast(t("contact.form.error"), {
         icon: <XCircle className="w-4 h-4" />,
       });
     }
@@ -146,10 +150,11 @@ export function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">Get in Touch</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            {t("contact.title")}
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I&apos;m always open to discussing new projects, creative ideas, or
-            opportunities to be part of your vision.
+            {t("contact.description")}
           </p>
         </motion.div>
 
@@ -163,11 +168,13 @@ export function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6">Let&apos;s Connect</h3>
+              <h3 className="text-2xl font-bold mb-6">
+                {t("contact.connect")}
+              </h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <motion.div
-                    key={info.label}
+                    key={info.label(t)}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -180,7 +187,7 @@ export function ContactSection() {
                             <info.icon className="h-6 w-6 text-main" />
                           </div>
                           <div>
-                            <p className="font-medium">{info.label}</p>
+                            <p className="font-medium">{info.label(t)}</p>
                             <a
                               href={info.href}
                               className="text-muted-foreground hover:text-main transition-colors"
@@ -198,7 +205,9 @@ export function ContactSection() {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
+              <h4 className="text-lg font-semibold mb-4">
+                {t("contact.followMe")}
+              </h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -230,7 +239,7 @@ export function ContactSection() {
           >
             <Card className="border-main/20">
               <CardHeader>
-                <CardTitle>Send a Message</CardTitle>
+                <CardTitle>{t("contact.form.title")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form
@@ -243,7 +252,7 @@ export function ContactSection() {
                       htmlFor="name"
                       className="block text-sm font-medium mb-2"
                     >
-                      Your Name
+                      {t("contact.name")}
                     </label>
                     <Input
                       id="name"
@@ -251,7 +260,7 @@ export function ContactSection() {
                       className={`border-main/20 focus:border-main ${
                         errors.name ? "border-red-500" : ""
                       } ${isSubmitting ? "opacity-60 cursor-not-allowed" : ""}`}
-                      placeholder="Your name"
+                      placeholder={t("contact.placeholder.name")}
                       disabled={isSubmitting}
                       autoComplete="off"
                     />
@@ -267,7 +276,7 @@ export function ContactSection() {
                       htmlFor="email"
                       className="block text-sm font-medium mb-2"
                     >
-                      Your Email
+                      {t("contact.email")}
                     </label>
                     <Input
                       id="email"
@@ -291,7 +300,7 @@ export function ContactSection() {
                       htmlFor="message"
                       className="block text-sm font-medium mb-2"
                     >
-                      Your Message
+                      {t("contact.message")}
                     </label>
                     <Textarea
                       id="message"
@@ -299,7 +308,7 @@ export function ContactSection() {
                       className={`border-main/20 focus:border-main min-h-[120px] ${
                         errors.message ? "border-red-500" : ""
                       } ${isSubmitting ? "opacity-60 cursor-not-allowed" : ""}`}
-                      placeholder="Tell me about your project..."
+                      placeholder={t("contact.placeholder.message")}
                       disabled={isSubmitting}
                     />
                     {errors.message && (
@@ -316,13 +325,13 @@ export function ContactSection() {
                   >
                     {isSubmitting ? (
                       <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin" />
-                        Sending...
+                        <Loader2 className="animate-spin" />
+                        {t("contact.sending")}
                       </div>
                     ) : (
                       <div className="flex items-center gap-2">
                         <Send className="h-4 w-4" />
-                        Send Message
+                        {t("contact.send")}
                       </div>
                     )}
                   </Button>

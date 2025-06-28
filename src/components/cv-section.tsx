@@ -5,10 +5,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 
-// import { useLanguage } from "@/components/language-provider"
+import { useLanguage } from "@/components/layout/language-provider";
 
 export function CVSection() {
-  // const { t, language } = useLanguage()
+  const { t } = useLanguage();
 
   const handleDownloadCV = (lang: "en" | "ar") => {
     // In a real application, you would have actual PDF files
@@ -27,14 +27,10 @@ export function CVSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            {/* {t("cv.title")} */}
-            My CV
+            {t("cv.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {/* {t("cv.description")} */}
-            Here you can find my professional CV, available for download in both
-            English and Arabic versions. Feel free to preview or download the CV
-            that suits your needs.
+            {t("cv.description")}
           </p>
         </motion.div>
 
@@ -47,15 +43,19 @@ export function CVSection() {
           className="space-y-8"
         >
           <div>
-            <h3 className="text-2xl font-bold mb-6">Download Options</h3>
+            <h3 className="text-2xl font-bold mb-6">
+              {t("cv.downloadOptions")}
+            </h3>
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="border-main/20 hover:border-main/40 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h4 className="font-semibold mb-2">English Version</h4>
+                      <h4 className="font-semibold mb-2">
+                        {t("cv.downloadOptions.english")}
+                      </h4>
                       <p className="text-sm text-muted-foreground">
-                        Complete CV in English (PDF format)
+                        {t("cv.downloadOptions.englishDescription")}
                       </p>
                     </div>
                     <Button
@@ -73,9 +73,11 @@ export function CVSection() {
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h4 className="font-semibold mb-2">Arabic Version</h4>
+                      <h4 className="font-semibold mb-2">
+                        {t("cv.downloadOptions.arabic")}
+                      </h4>
                       <p className="text-sm text-muted-foreground">
-                        Complete CV in Arabic (PDF format)
+                        {t("cv.downloadOptions.arabicDescription")}
                       </p>
                     </div>
                     <Button
@@ -98,7 +100,7 @@ export function CVSection() {
               <CardContent className="p-4">
                 <div className="text-2xl font-bold text-main">4+</div>
                 <div className="text-sm text-muted-foreground">
-                  Years Experience
+                  {t("cv.experienceYears")}
                 </div>
               </CardContent>
             </Card>
@@ -106,7 +108,7 @@ export function CVSection() {
               <CardContent className="p-4">
                 <div className="text-2xl font-bold text-main">15+</div>
                 <div className="text-sm text-muted-foreground">
-                  Technologies
+                  {t("cv.technologies")}
                 </div>
               </CardContent>
             </Card>

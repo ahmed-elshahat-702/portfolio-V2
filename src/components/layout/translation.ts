@@ -234,10 +234,16 @@ export const translations = {
     // CV Section
     "cv.title": "Curriculum Vitae",
     "cv.description":
-      "Download my complete CV to learn more about my experience and qualifications.",
-    "cv.downloadEn": "Download English CV",
-    "cv.downloadAr": "Download Arabic CV",
-    "cv.preview": "CV Preview",
+      "Here you can find my professional CV, available for download in both English and Arabic versions. Feel free to preview or download the CV that suits your needs.",
+    "cv.downloadOptions": "Download Options",
+    "cv.downloadOptions.english": "English Version",
+    "cv.downloadOptions.englishDescription":
+      "Complete CV in English (PDF format)",
+    "cv.downloadOptions.arabic": "Arabic Version",
+    "cv.downloadOptions.arabicDescription":
+      "Complete CV in Arabic (PDF format)",
+    "cv.experienceYears": "Years Experience",
+    "cv.technologies": "Technology",
 
     // Contact
     "contact.title": "Get In Touch",
@@ -478,8 +484,19 @@ export const translations = {
     "projects.items.ageCalculator.description":
       "تطبيق ويب لحساب عمرك بالسنوات والأشهر والأيام.",
 
-    // Certificates
-    "certificates.title": "الشهادات والإنجازات",
+    // CV Section
+    "cv.title": "السيرة الذاتية",
+    "cv.description":
+      "هنا يمكنك العثور على سيرتي الذاتية المهنية، متاحة للتنزيل باللغتين الإنجليزية والعربية. لا تتردد في معاينة أو تحميل النسخة التي تناسب احتياجاتك.",
+    "cv.downloadOptions": "خيارات التحميل",
+    "cv.downloadOptions.english": "النسخة الإنجليزية",
+    "cv.downloadOptions.englishDescription":
+      "السيرة الذاتية الكاملة باللغة الإنجليزية (بصيغة PDF)",
+    "cv.downloadOptions.arabic": "النسخة العربية",
+    "cv.downloadOptions.arabicDescription":
+      "السيرة الذاتية الكاملة باللغة العربية (بصيغة PDF)",
+    "cv.experienceYears": "سنوات الخبرة",
+    "cv.technologies": "تقنية",
 
     // Contact
     "contact.title": "تواصل معي",
@@ -489,14 +506,6 @@ export const translations = {
     "contact.email": "البريد الإلكتروني",
     "contact.message": "الرسالة",
     "contact.send": "إرسال الرسال",
-
-    // CV Section
-    "cv.title": "السيرة الذاتية",
-    "cv.description":
-      "حمل سيرتي الذاتية الكاملة لتتعرف أكثر على خبرتي ومؤهلاتي.",
-    "cv.downloadEn": "تحميل السيرة الذاتية بالإنجليزية",
-    "cv.downloadAr": "تحميل السيرة الذاتية بالعربية",
-    "cv.preview": "معاينة السيرة الذاتية",
 
     // Footer
     "footer.rights": "جميع الحقوق محفوظة.",

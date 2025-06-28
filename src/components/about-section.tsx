@@ -4,89 +4,182 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Calendar, Earth, Pen, Server } from "lucide-react";
+import { useLanguage } from "./layout/language-provider";
 
 const stats = [
-  { key: "Front-End", value: "4+", icon: Earth },
-  { key: "Full-stack", value: "2+", icon: Server },
-  { key: "Logo Design", value: "2+", icon: Pen },
-  // { key: "experience", value: "5+", icon: Briefcase },
-  // { key: "projects", value: "6+", icon: GraduationCap },
-  // { key: "clients", value: "30+", icon: MapPin },
+  {
+    key: (t: (key: string) => string) => t("about.stats.frontend"),
+    value: "4+",
+    icon: Earth,
+  },
+  {
+    key: (t: (key: string) => string) => t("about.stats.fullstack"),
+    value: "2+",
+    icon: Server,
+  },
+  {
+    key: (t: (key: string) => string) => t("about.stats.logoDesign"),
+    value: "2+",
+    icon: Pen,
+  },
+  // { key: (t: (key: string) => string) => t("about.stats.experience"), value: "5+", icon: Briefcase },
+  // { key: (t: (key: string) => string) => t("about.stats.projects"), value: "6+", icon: GraduationCap },
+  // { key: (t: (key: string) => string) => t("about.stats.clients"), value: "30+", icon: MapPin },
 ];
 
 const timeline = [
   {
     year: "2026",
-    title: "Nursing",
-    company: "New Ismaillia National University",
+    title: (t: (key: string) => string) => t("about.timeline.nursing.title"),
+    company: (t: (key: string) => string) =>
+      t("about.timeline.nursing.company"),
     type: "work",
-    description:
-      "Graduated with a Bachelor's degree in Nursing, focusing on patient care and healthcare management.",
+    description: (t: (key: string) => string) =>
+      t("about.timeline.nursing.description"),
   },
   {
     year: "2025",
-    title: "Logo Designer",
-    company: "Online",
+    title: (t: (key: string) => string) =>
+      t("about.timeline.logoDesigner.title"),
+    company: (t: (key: string) => string) =>
+      t("about.timeline.logoDesigner.company"),
     type: "work",
-    description:
-      "Designed logos for various clients, focusing on brand identity and visual appeal.",
+    description: (t: (key: string) => string) =>
+      t("about.timeline.logoDesigner.description"),
   },
   {
     year: "2024",
-    title: "Full Stack Developer",
-    company: "Online",
+    title: (t: (key: string) => string) => t("about.timeline.fullStack.title"),
+    company: (t: (key: string) => string) =>
+      t("about.timeline.fullStack.company"),
     type: "work",
-    description:
-      "Leading development of enterprise web applications using React,, Next, and Node.js.",
+    description: (t: (key: string) => string) =>
+      t("about.timeline.fullStack.description"),
   },
   {
     year: "2023",
-    title: "Back-End Developer",
-    company: "Online",
+    title: (t: (key: string) => string) => t("about.timeline.backend.title"),
+    company: (t: (key: string) => string) =>
+      t("about.timeline.backend.company"),
     type: "education",
-    description:
-      "Focused on building scalable backend systems with Node.js and Express.",
+    description: (t: (key: string) => string) =>
+      t("about.timeline.backend.description"),
   },
   {
     year: "2023",
-    title: "Frontend Developer",
-    company: "Online",
+    title: (t: (key: string) => string) => t("about.timeline.frontend.title"),
+    company: (t: (key: string) => string) =>
+      t("about.timeline.frontend.company"),
     type: "work",
-    description:
-      "Specialized in React, Next development and UI/UX implementation.",
+    description: (t: (key: string) => string) =>
+      t("about.timeline.frontend.description"),
   },
   {
     year: "2022",
-    title: "Basic web development fundamentals",
-    company: "Online",
+    title: (t: (key: string) => string) =>
+      t("about.timeline.webFundamentals.title"),
+    company: (t: (key: string) => string) =>
+      t("about.timeline.webFundamentals.company"),
     type: "work",
-    description:
-      "Completed courses in HTML, CSS, and JavaScript to build a solid foundation in web development.",
+    description: (t: (key: string) => string) =>
+      t("about.timeline.webFundamentals.description"),
   },
 ];
 
 const skills = [
-  { name: "Next.js", level: 90, category: "Frontend" },
-  { name: "React", level: 85, category: "Frontend" },
-  { name: "TypeScript", level: 90, category: "Frontend" },
-  { name: "Node.js", level: 75, category: "Backend" },
-  { name: "MongoDB", level: 90, category: "Database" },
-  { name: "Express.js", level: 95, category: "Backend" },
-  { name: "Bootstrap", level: 90, category: "Styling" },
-  { name: "Tailwind CSS", level: 90, category: "Styling" },
-  { name: "HTML", level: 90, category: "Frontend" },
-  { name: "CSS", level: 90, category: "Frontend" },
-  { name: "JavaScript", level: 90, category: "Frontend" },
-  { name: "Git", level: 80, category: "Version Control" },
-  { name: "Github", level: 80, category: "Version Control" },
-  { name: "Nursing", level: 80, category: "Other" },
-  // { name: "Python", level: 80, category: "Programming Language" },
-  // { name: "PostgreSQL", level: 75, category: "Database" },
-  // { name: "AWS", level: 70, category: "Cloud" },
-  // { name: "Docker", level: 75, category: "DevOps" },
+  {
+    name: (t: (key: string) => string) => t("about.skills.nextjs"),
+    level: 90,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.frontend"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.react"),
+    level: 85,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.frontend"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.typescript"),
+    level: 90,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.frontend"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.nodejs"),
+    level: 75,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.backend"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.mongodb"),
+    level: 90,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.database"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.expressJS"),
+    level: 95,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.backend"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.bootstrap"),
+    level: 90,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.styling"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.tailwindcss"),
+    level: 90,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.styling"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.html"),
+    level: 90,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.frontend"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.css"),
+    level: 90,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.frontend"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.javascript"),
+    level: 90,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.frontend"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.git"),
+    level: 80,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.versionControl"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.github"),
+    level: 80,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.versionControl"),
+  },
+  {
+    name: (t: (key: string) => string) => t("about.skills.nursing"),
+    level: 80,
+    category: (t: (key: string) => string) =>
+      t("about.skills.categories.other"),
+  },
+  // { name: (t: (key: string) => string) => t("about.skills.python"), level: 80, category: (t: (key: string) => string) => t("about.skills.categories.programmingLanguage") },
+  // { name: (t: (key: string) => string) => t("about.skills.postgresql"), level: 75, category: (t: (key: string) => string) => t("about.skills.categories.database") },
+  // { name: (t: (key: string) => string) => t("about.skills.aws"), level: 70, category: (t: (key: string) => string) => t("about.skills.categories.cloud") },
+  // { name: (t: (key: string) => string) => t("about.skills.docker"), level: 75, category: (t: (key: string) => string) => t("about.skills.categories.devops") },
 ];
 
 export function AboutSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -97,12 +190,11 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">About Me</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            {t("about.title")}
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I am a dedicated full-stack developer with expertise in modern web
-            technologies. My journey in software development spans several
-            years, during which I have honed my skills in both frontend and
-            backend development.
+            {t("about.description")}
           </p>
         </motion.div>
 
@@ -116,7 +208,7 @@ export function AboutSection() {
         >
           {stats.map((stat) => (
             <Card
-              key={stat.key}
+              key={stat.key(t)}
               className="text-center border-main/20 hover:border-main/40 transition-colors"
             >
               <CardContent className="p-8">
@@ -124,7 +216,7 @@ export function AboutSection() {
                 <div className="text-4xl font-bold text-main mb-2">
                   {stat.value}
                 </div>
-                <div className="text-muted-foreground">{stat.key}</div>
+                <div className="text-muted-foreground">{stat.key(t)}</div>
               </CardContent>
             </Card>
           ))}
@@ -138,7 +230,9 @@ export function AboutSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-8">Experience & Education</h3>
+            <h3 className="text-2xl font-bold mb-8">
+              {t("about.skills.experienceAndEducation")}
+            </h3>
             <div className="space-y-8">
               {timeline.map((item, index) => (
                 <motion.div
@@ -168,10 +262,12 @@ export function AboutSection() {
                       </Badge>
                       <Calendar className="h-4 w-4 text-muted-foreground" />
                     </div>
-                    <h4 className="text-lg font-semibold mb-1">{item.title}</h4>
-                    <p className="text-main mb-2">{item.company}</p>
+                    <h4 className="text-lg font-semibold mb-1">
+                      {item.title(t)}
+                    </h4>
+                    <p className="text-main mb-2">{item.company(t)}</p>
                     <p className="text-muted-foreground text-sm">
-                      {item.description}
+                      {item.description(t)}
                     </p>
                   </div>
                 </motion.div>
@@ -186,36 +282,45 @@ export function AboutSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-8">Skills & Technologies</h3>
+            <h3 className="text-2xl font-bold mb-8">
+              {t("about.skills.skillsAndTechnologies")}
+            </h3>
             <div className="space-y-6">
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-sm text-muted-foreground">
-                      {skill.level}%
-                    </span>
-                  </div>
-                  <div className="w-full bg-muted rounded-full h-2">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="bg-main h-2 rounded-full"
-                    />
-                  </div>
-                  <Badge variant="outline" className="mt-2 text-xs">
-                    {skill.category}
-                  </Badge>
-                </motion.div>
-              ))}
+              {skills.map((skill, index) => {
+                // Ensure key is always a string
+                const skillName =
+                  typeof skill.name === "function" ? skill.name(t) : skill.name;
+                return (
+                  <motion.div
+                    key={skillName}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="font-medium">{skillName}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {skill.level}%
+                      </span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        transition={{ duration: 1, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="bg-main h-2 rounded-full"
+                      />
+                    </div>
+                    <Badge variant="outline" className="mt-2 text-xs">
+                      {typeof skill.category === "function"
+                        ? skill.category(t)
+                        : skill.category}
+                    </Badge>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>

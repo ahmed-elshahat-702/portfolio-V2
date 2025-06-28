@@ -1,14 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Download, Eye, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { BackgroundElements } from "./background-elements";
 import { TypewriterAnimation } from "./typewriter-animation";
+import { useLanguage } from "@/components/layout/language-provider";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   const scrollToNext = () => {
     window.scrollTo({
       top: window.innerHeight,
@@ -39,7 +42,7 @@ export default function Hero() {
                 transition={{ delay: 0.2, duration: 0.8 }}
                 className="text-5xl lg:text-7xl font-bold leading-tight"
               >
-                <span className="block">Ahmed</span>
+                <span className="block">{t("hero.greeting")}</span>
               </motion.h1>
 
               <TypewriterAnimation />
@@ -50,9 +53,7 @@ export default function Hero() {
                 transition={{ delay: 0.4, duration: 0.8 }}
                 className="text-xl text-muted-foreground leading-relaxed max-w-2xl"
               >
-                Passionate about creating modern web applications with
-                cutting-edge technologies. Specialized in React, Next, and
-                Node.js.
+                {t("hero.description")}
               </motion.p>
 
               <motion.div
@@ -66,9 +67,9 @@ export default function Hero() {
                   size="lg"
                   className="font-semibold px-8 py-6 text-lg rounded-2xl group"
                 >
-                  <Link href="#projects">
+                  <Link href="#projects" className={buttonVariants()}>
                     <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                    View Projects
+                    {t("hero.viewProjects")}
                   </Link>
                 </Button>
 
@@ -84,7 +85,7 @@ export default function Hero() {
                     rel="noopener noreferrer"
                   >
                     <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                    Download CV
+                    {t("hero.downloadCV")}
                   </Link>
                 </Button>
               </motion.div>
@@ -158,7 +159,7 @@ export default function Hero() {
             aria-label="Scroll Down"
           >
             <span className="text-sm font-semibold text-main group-hover:text-main/80 transition-colors tracking-wider uppercase">
-              Scroll Down
+              {t("hero.scrollDown")}
             </span>
             <span className="relative flex flex-col items-center">
               <ChevronDown className="h-8 w-8 text-main group-hover:text-main/80 animate-bounce" />

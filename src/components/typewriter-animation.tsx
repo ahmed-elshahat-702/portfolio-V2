@@ -2,16 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-const titles = [
-  "Full-stack Developer",
-  "Logo Designer",
-  "Problem Solver",
-  "Creative Thinker",
-  "Nurse",
-];
+import { useLanguage } from "@/components/layout/language-provider";
 
 export function TypewriterAnimation() {
+  const { t } = useLanguage();
+
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
@@ -26,7 +21,7 @@ export function TypewriterAnimation() {
       return () => clearTimeout(pauseTimer);
     }
 
-    const current = titles[index];
+    const current = t("hero.titles")[index] || "";
     const nextText = deleting
       ? current.slice(0, text.length - 1)
       : current.slice(0, text.length + 1);
@@ -41,14 +36,14 @@ export function TypewriterAnimation() {
 
         if (deleting && nextText === "") {
           setDeleting(false);
-          setIndex((prev) => (prev + 1) % titles.length);
+          setIndex((prev) => (prev + 1) % t("hero.titles").length);
         }
       },
       deleting ? 50 : 100
     );
 
     return () => clearTimeout(timeout);
-  }, [text, deleting, pause, index]);
+  }, [text, deleting, pause, index, t]);
 
   return (
     <div className="h-16 flex items-center">

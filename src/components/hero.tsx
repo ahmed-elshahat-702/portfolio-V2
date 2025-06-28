@@ -83,6 +83,7 @@ export default function Hero() {
                     href="/cv-en.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
+                    download
                   >
                     <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                     {t("hero.downloadCV")}

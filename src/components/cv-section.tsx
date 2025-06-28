@@ -6,15 +6,10 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 
 import { useLanguage } from "@/components/layout/language-provider";
+import Link from "next/link";
 
 export function CVSection() {
   const { t } = useLanguage();
-
-  const handleDownloadCV = (lang: "en" | "ar") => {
-    // In a real application, you would have actual PDF files
-    const filename = lang === "en" ? "cv-en.pdf" : "cv-ar.pdf";
-    window.open(`/${filename}`, "_blank");
-  };
 
   return (
     <section id="cv" className="py-20">
@@ -59,11 +54,18 @@ export function CVSection() {
                       </p>
                     </div>
                     <Button
-                      onClick={() => handleDownloadCV("en")}
+                      asChild
                       className="bg-main hover:bg-main/90 text-main-foreground"
                     >
-                      <Download className="mr-2 h-4 w-4" />
-                      Download
+                      <Link
+                        href="/cv-en.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                      >
+                        <Download className="mr-2 h-4 w-4" />
+                        Download
+                      </Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -81,12 +83,19 @@ export function CVSection() {
                       </p>
                     </div>
                     <Button
-                      onClick={() => handleDownloadCV("ar")}
+                      asChild
                       variant="outline"
                       className="border-main text-main hover:bg-main hover:text-main-foreground"
                     >
-                      <Download className="mr-2 h-4 w-4" />
-                      تحميل
+                      <Link
+                        href="/cv-ar.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                      >
+                        <Download className="mr-2 h-4 w-4" />
+                        تحميل
+                      </Link>
                     </Button>
                   </div>
                 </CardContent>

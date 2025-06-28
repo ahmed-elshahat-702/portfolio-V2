@@ -139,11 +139,6 @@ export const translations = {
     "stats.additionalInfo.description":
       "These numbers represent more than just statistics—they reflect my commitment to excellence, continuous learning, and dedication to delivering outstanding results. Every project is an opportunity to grow and create something meaningful.",
 
-    // Projects
-    "projects.title": "Featured Projects",
-    "projects.viewCode": "View Code",
-    "projects.liveDemo": "Live Demo",
-
     // Services
     "services.title": "Services",
     "services.description":
@@ -219,8 +214,30 @@ export const translations = {
       "Let's discuss your ideas and create something amazing together. I'm here to help bring your vision to life.",
     "process.cta.button": "Let's Get Started",
 
-    // Certificates
-    "certificates.title": "Certificates & Achievements",
+    // Projects
+    "projects.title": "My Projects",
+    "projects.description":
+      "Here are some of my recent projects that showcase my skills and experience in full-stack development.",
+    "projects.featured.title": "Featured Projects",
+    "projects.other.title": "Other Projects",
+    "projects.viewCode": "View Code",
+    "projects.liveDemo": "Live Demo",
+    "projects.items.recipeHub.description":
+      "A full-stack recipe sharing platform with authentication, MongoDB database, and responsive design.",
+    "projects.items.randomAdvice.description":
+      "A simple app that fetches and displays random advice using an external API.",
+    "projects.items.hangmanGame.description":
+      "A classic hangman game built with HTML, CSS, and JavaScript.",
+    "projects.items.ageCalculator.description":
+      "A web app to calculate your age in years, months, and days.",
+
+    // CV Section
+    "cv.title": "Curriculum Vitae",
+    "cv.description":
+      "Download my complete CV to learn more about my experience and qualifications.",
+    "cv.downloadEn": "Download English CV",
+    "cv.downloadAr": "Download Arabic CV",
+    "cv.preview": "CV Preview",
 
     // Contact
     "contact.title": "Get In Touch",
@@ -230,14 +247,6 @@ export const translations = {
     "contact.email": "Email",
     "contact.message": "Message",
     "contact.send": "Send Message",
-
-    // CV Section
-    "cv.title": "Curriculum Vitae",
-    "cv.description":
-      "Download my complete CV to learn more about my experience and qualifications.",
-    "cv.downloadEn": "Download English CV",
-    "cv.downloadAr": "Download Arabic CV",
-    "cv.preview": "CV Preview",
 
     // Footer
     "footer.rights": "All rights reserved.",
@@ -381,11 +390,6 @@ export const translations = {
     "stats.additionalInfo.description":
       "هذه الأرقام تمثل أكثر من مجرد إحصائيات - إنها تعكس التزامي بالتميز، والتعلم المستمر، والتفاني في تقديم نتائج متميزة. كل مشروع هو فرصة للنمو وخلق شيء ذو معنى.",
 
-    // Projects
-    "projects.title": "المشاريع المميزة",
-    "projects.viewCode": "عرض الكود",
-    "projects.liveDemo": "عرض مباشر",
-
     // Services
     "services.title": "الخدمات",
     "services.description":
@@ -456,6 +460,23 @@ export const translations = {
     "process.cta.description":
       "دعنا نناقش أفكارك ونخلق شيئًا رائعًا معًا. أنا هنا لمساعدتك في تحقيق رؤيتك.",
     "process.cta.button": "لنبدأ",
+
+    // Projects
+    "projects.title": "مشاريعي",
+    "projects.description":
+      "هنا بعض من مشاريعي الأخيرة التي تعرض مهاراتي وخبرتي في تطوير الويب المتكامل.",
+    "projects.featured.title": "المشاريع المميزة",
+    "projects.other.title": "مشاريع أخرى",
+    "projects.viewCode": "عرض الكود",
+    "projects.liveDemo": "عرض مباشر",
+    "projects.items.recipeHub.description":
+      "منصة مشاركة وصفات متكاملة مع مصادقة، قاعدة بيانات MongoDB، وتصميم متجاوب.",
+    "projects.items.randomAdvice.description":
+      "تطبيق بسيط يقوم بجلب وعرض نصائح عشوائية باستخدام واجهة برمجة التطبيقات الخارجية.",
+    "projects.items.hangmanGame.description":
+      "لعبة هانغمان الكلاسيكية مبنية باستخدام HTML وCSS وJavaScript.",
+    "projects.items.ageCalculator.description":
+      "تطبيق ويب لحساب عمرك بالسنوات والأشهر والأيام.",
 
     // Certificates
     "certificates.title": "الشهادات والإنجازات",

@@ -146,15 +146,20 @@ export const translations = {
 
     // Services
     "services.title": "Services",
+    "services.description":
+      "I offer comprehensive web development services to help bring your ideas to life with modern technologies and best practices.",
+    "services.web.title": "Web Development",
+    "services.web.desc":
+      "Modern, scalable web applications using the latest technologies and best practices.",
     "services.frontend.title": "Frontend Development",
     "services.frontend.desc":
-      "Modern, responsive web applications using React, Next.js, and TypeScript",
+      "Modern and responsive web apps using React, Next.js, and TypeScript.",
     "services.backend.title": "Backend Development",
     "services.backend.desc":
-      "Scalable APIs and server-side solutions with Node.js and cloud technologies",
-    "services.uiux.title": "UI/UX Design",
-    "services.uiux.desc":
-      "User-centered design with modern aesthetics and optimal user experience",
+      "Scalable APIs and server solutions using Node.js and cloud technologies.",
+    "services.logo.title": "Logo Design",
+    "services.logo.desc":
+      "Creative logo design focused on brand identity and visual communication.",
 
     // Certificates
     "certificates.title": "Certificates & Achievements",
@@ -325,15 +330,20 @@ export const translations = {
 
     // Services
     "services.title": "الخدمات",
+    "services.description":
+      "أقدم خدمات تطوير الويب الشاملة لمساعدتك في تحقيق أفكارك باستخدام أحدث التقنيات وأفضل الممارسات.",
+    "services.web.title": "تطوير الويب",
+    "services.web.desc":
+      "تطبيقات ويب حديثة وقابلة للتطوير باستخدام أحدث التقنيات وأفضل الممارسات.",
     "services.frontend.title": "تطوير الواجهات الأمامية",
     "services.frontend.desc":
-      "تطبيقات ويب حديثة ومتجاوبة باستخدام React و Next.js و TypeScript",
+      "تطبيقات ويب حديثة ومتجاوبة باستخدام React و Next.js و TypeScript.",
     "services.backend.title": "تطوير الواجهات الخلفية",
     "services.backend.desc":
-      "واجهات برمجة تطبيقات قابلة للتوسع وحلول خادم باستخدام Node.js والتقنيات السحابية",
-    "services.uiux.title": "تصميم واجهة المستخدم",
-    "services.uiux.desc":
-      "تصميم محوره المستخدم مع جماليات حديثة وتجربة مستخدم مثلى",
+      "APIs وحلول خادم قابلة للتطوير باستخدام Node.js وتقنيات السحابة.",
+    "services.logo.title": "تصميم الشعار",
+    "services.logo.desc":
+      "تصميم شعارات إبداعية تركز على هوية العلامة التجارية والتواصل البصري.",
 
     // Certificates
     "certificates.title": "الشهادات والإنجازات",

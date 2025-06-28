@@ -3,74 +3,41 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Code, Earth, Palette, Server } from "lucide-react";
+import { useLanguage } from "./layout/language-provider";
 
 const services = [
   {
     icon: Earth,
-    title: "Web Development",
-    titleKey: "services.frontend.title",
-    desc: "Full-stack web development using React, Next.js, and modern web technologies",
-    descKey: "services.frontend.desc",
+    titleKey: "services.web.title",
+    descKey: "services.web.desc",
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
   },
   {
     icon: Code,
-    title: "Front-End Development",
     titleKey: "services.frontend.title",
-    desc: "Building responsive and interactive user interfaces with React and modern front-end technologies.",
     descKey: "services.frontend.desc",
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
   },
   {
     icon: Server,
-    title: "Backend Development",
     titleKey: "services.backend.title",
-    desc: "Robust backend solutions with Node.js, Express, and database integration",
     descKey: "services.backend.desc",
     color: "text-green-500",
     bgColor: "bg-green-500/10",
   },
   {
     icon: Palette,
-    title: "Logo Design",
     titleKey: "services.logo.title",
-    desc: "Creative logo designs that capture your brand's essence and identity.",
     descKey: "services.logo.desc",
     color: "text-purple-500",
     bgColor: "bg-purple-500/10",
   },
-  // {
-  //   icon: Smartphone,
-  //   title: "Mobile Development",
-  //   titleKey: "services.mobile.title",
-  //   desc: "Cross-platform mobile applications using React Native and modern mobile technologies",
-  //   descKey: "services.mobile.desc",
-  //   color: "text-pink-500",
-  //   bgColor: "bg-pink-500/10",
-  // },
-  // {
-  //   icon: Cloud,
-  //   title: "Cloud Solutions",
-  //   titleKey: "services.cloud.title",
-  //   desc: "Scalable cloud infrastructure and deployment using AWS, Vercel, and other cloud platforms",
-  //   descKey: "services.cloud.desc",
-  //   color: "text-orange-500",
-  //   bgColor: "bg-orange-500/10",
-  // },
-  // {
-  //   icon: Database,
-  //   title: "Database Design",
-  //   titleKey: "services.database.title",
-  //   desc: "Efficient database architecture and optimization for both SQL and NoSQL databases",
-  //   descKey: "services.database.desc",
-  //   color: "text-cyan-500",
-  //   bgColor: "bg-cyan-500/10",
-  // },
 ];
 
 export function ServicesSection() {
+  const { t } = useLanguage();
   return (
     <section id="services" className="py-20">
       <div className="container mx-auto px-4">
@@ -81,10 +48,11 @@ export function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">Services</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            {t("services.title")}
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I offer comprehensive web development services to help bring your
-            ideas to life with modern technologies and best practices.
+            {t("services.description")}
           </p>
         </motion.div>
 
@@ -107,14 +75,12 @@ export function ServicesSection() {
                     <service.icon className={`h-8 w-8 ${service.color}`} />
                   </motion.div>
                   <CardTitle className="text-xl">
-                    {/* {service.titleKey ? t(service.titleKey) : service.title} */}
-                    {service.title}
+                    {t(service.titleKey)}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-muted-foreground leading-relaxed">
-                    {/* {service.descKey ? t(service.descKey) : service.desc} */}
-                    {service.desc}
+                    {t(service.descKey)}
                   </p>
                 </CardContent>
               </Card>

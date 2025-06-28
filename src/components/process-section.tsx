@@ -12,97 +12,97 @@ import {
 } from "lucide-react";
 import { Button, buttonVariants } from "./ui/button";
 import Link from "next/link";
-// import { useLanguage } from "@/components/language-provider"
+import { useLanguage } from "@/components/layout/language-provider";
 
 const processSteps = [
   {
     id: 1,
-    title: "Discovery & Planning",
-    description:
-      "I start with understanding your goals, requirements, and target audience to create a solid foundation.",
+    title: (t: (key: string) => string) => t("process.steps.1.title"),
+    description: (t: (key: string) => string) =>
+      t("process.steps.1.description"),
     icon: MessageCircle,
     color: "from-blue-500 to-blue-600",
     details: [
-      "Requirements gathering",
-      "Market research",
-      "Technical planning",
-      "Timeline creation",
+      (t: (key: string) => string) => t("process.steps.1.details.0"),
+      (t: (key: string) => string) => t("process.steps.1.details.1"),
+      (t: (key: string) => string) => t("process.steps.1.details.2"),
+      (t: (key: string) => string) => t("process.steps.1.details.3"),
     ],
   },
   {
     id: 2,
-    title: "Design & Prototyping",
-    description:
-      "Creating intuitive and engaging designs that align with your brand and user needs.",
+    title: (t: (key: string) => string) => t("process.steps.2.title"),
+    description: (t: (key: string) => string) =>
+      t("process.steps.2.description"),
     icon: Lightbulb,
     color: "from-purple-500 to-purple-600",
     details: [
-      "User experience design",
-      "Visual design",
-      "Interactive prototypes",
-      "Design system",
+      (t: (key: string) => string) => t("process.steps.2.details.0"),
+      (t: (key: string) => string) => t("process.steps.2.details.1"),
+      (t: (key: string) => string) => t("process.steps.2.details.2"),
+      (t: (key: string) => string) => t("process.steps.2.details.3"),
     ],
   },
   {
     id: 3,
-    title: "Development",
-    description:
-      "Building your application with clean, scalable code using modern technologies and best practices.",
+    title: (t: (key: string) => string) => t("process.steps.3.title"),
+    description: (t: (key: string) => string) =>
+      t("process.steps.3.description"),
     icon: Code,
     color: "from-green-500 to-green-600",
     details: [
-      "Frontend development",
-      "Backend development",
-      "Database design",
-      "API integration",
+      (t: (key: string) => string) => t("process.steps.3.details.0"),
+      (t: (key: string) => string) => t("process.steps.3.details.1"),
+      (t: (key: string) => string) => t("process.steps.3.details.2"),
+      (t: (key: string) => string) => t("process.steps.3.details.3"),
     ],
   },
   {
     id: 4,
-    title: "Testing & Quality Assurance",
-    description:
-      "Thorough testing to ensure your application works flawlessly across all devices and browsers.",
+    title: (t: (key: string) => string) => t("process.steps.4.title"),
+    description: (t: (key: string) => string) =>
+      t("process.steps.4.description"),
     icon: CheckCircle,
     color: "from-orange-500 to-orange-600",
     details: [
-      "Unit testing",
-      "Integration testing",
-      "Cross-browser testing",
-      "Performance optimization",
+      (t: (key: string) => string) => t("process.steps.4.details.0"),
+      (t: (key: string) => string) => t("process.steps.4.details.1"),
+      (t: (key: string) => string) => t("process.steps.4.details.2"),
+      (t: (key: string) => string) => t("process.steps.4.details.3"),
     ],
   },
   {
     id: 5,
-    title: "Launch & Deployment",
-    description:
-      "Deploying your application to production with proper monitoring and performance optimization.",
+    title: (t: (key: string) => string) => t("process.steps.5.title"),
+    description: (t: (key: string) => string) =>
+      t("process.steps.5.description"),
     icon: Rocket,
     color: "from-red-500 to-red-600",
     details: [
-      "Production deployment",
-      "Performance monitoring",
-      "Security implementation",
-      "Go-live support",
+      (t: (key: string) => string) => t("process.steps.5.details.0"),
+      (t: (key: string) => string) => t("process.steps.5.details.1"),
+      (t: (key: string) => string) => t("process.steps.5.details.2"),
+      (t: (key: string) => string) => t("process.steps.5.details.3"),
     ],
   },
   {
     id: 6,
-    title: "Support & Maintenance",
-    description:
-      "Ongoing support, updates, and maintenance to keep your application running smoothly.",
+    title: (t: (key: string) => string) => t("process.steps.6.title"),
+    description: (t: (key: string) => string) =>
+      t("process.steps.6.description"),
     icon: Users,
     color: "from-cyan-500 to-cyan-600",
     details: [
-      "Bug fixes",
-      "Feature updates",
-      "Performance monitoring",
-      "Technical support",
+      (t: (key: string) => string) => t("process.steps.6.details.0"),
+      (t: (key: string) => string) => t("process.steps.6.details.1"),
+      (t: (key: string) => string) => t("process.steps.6.details.2"),
+      (t: (key: string) => string) => t("process.steps.6.details.3"),
     ],
   },
 ];
 
 export function ProcessSection() {
-  // const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <section id="process" className="py-20">
@@ -115,11 +115,10 @@ export function ProcessSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            My Development Process
+            {t("process.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A structured approach to delivering high-quality web applications
-            that meet your business objectives and exceed user expectations.
+            {t("process.description")}
           </p>
         </motion.div>
 
@@ -159,13 +158,13 @@ export function ProcessSection() {
                         </div>
                       </div>
                       <CardTitle className="text-xl group-hover:text-main transition-colors">
-                        {step.title}
+                        {step.title(t)}
                       </CardTitle>
                     </CardHeader>
 
                     <CardContent className="relative z-10 space-y-4">
                       <p className="text-muted-foreground leading-relaxed">
-                        {step.description}
+                        {step.description(t)}
                       </p>
                       <ul className="space-y-2">
                         {step.details.map((detail, i) => (
@@ -174,7 +173,7 @@ export function ProcessSection() {
                             className="flex items-center gap-2 text-sm text-muted-foreground"
                           >
                             <div className="w-1.5 h-1.5 bg-main rounded-full" />
-                            {detail}
+                            {detail(t)}
                           </li>
                         ))}
                       </ul>
@@ -205,18 +204,17 @@ export function ProcessSection() {
           <Card className="border-0 bg-gradient-to-br from-main/10 to-background/10 backdrop-blur-xl shadow-lg max-w-2xl mx-auto">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">
-                Ready to Start Your Project?
+                {t("process.cta.title")}
               </h3>
               <p className="text-muted-foreground mb-6">
-                Let&apos;s discuss your ideas and create something amazing
-                together. I&apos;m here to help bring your vision to life.
+                {t("process.cta.description")}
               </p>
               <Button
                 asChild
                 className="bg-main hover:bg-main/90 font-semibold px-8 py-4 rounded-2xl transition-colors"
               >
                 <Link href="#contact" className={buttonVariants()}>
-                  Let&apos;s Get Started
+                  {t("process.cta.button")}
                 </Link>
               </Button>
             </CardContent>

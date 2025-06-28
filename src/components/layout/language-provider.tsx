@@ -33,11 +33,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [language]);
 
   const t = (key: string): string => {
-    return (
+    const value =
       translations[language][
         key as keyof (typeof translations)[typeof language]
-      ] || key
-    );
+      ];
+    if (Array.isArray(value)) {
+      return value.join(" ");
+    }
+    return value || key;
   };
 
   return (

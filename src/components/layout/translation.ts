@@ -161,6 +161,64 @@ export const translations = {
     "services.logo.desc":
       "Creative logo design focused on brand identity and visual communication.",
 
+    // Process
+    "process.title": "My Development Process",
+    "process.description":
+      "A structured approach to delivering high-quality web applications that meet your business objectives and exceed user expectations.",
+    "process.steps.1.title": "Discovery & Understanding",
+    "process.steps.1.description":
+      "We start by understanding your vision, needs, and project goals.",
+    "process.steps.1.details.0": "Initial meeting to discuss ideas.",
+    "process.steps.1.details.1": "Gathering project requirements.",
+    "process.steps.1.details.2": "Market and competitor analysis.",
+    "process.steps.1.details.3": "Defining scope and objectives.",
+
+    "process.steps.2.title": "Planning & Design",
+    "process.steps.2.description":
+      "We turn ideas into a clear action plan and initial designs.",
+    "process.steps.2.details.0": "Project planning and timeline setup.",
+    "process.steps.2.details.1": "User experience (UX) design.",
+    "process.steps.2.details.2": "Creating wireframes.",
+    "process.steps.2.details.3": "Reviewing designs with the client.",
+
+    "process.steps.3.title": "Development & Coding",
+    "process.steps.3.description":
+      "We start building the application using the latest technologies.",
+    "process.steps.3.details.0": "Setting up the development environment.",
+    "process.steps.3.details.1": "Frontend and backend development.",
+    "process.steps.3.details.2": "Integrating databases and services.",
+    "process.steps.3.details.3": "Continuous testing for quality assurance.",
+
+    "process.steps.4.title": "Testing & Review",
+    "process.steps.4.description":
+      "We thoroughly test the application for performance and quality.",
+    "process.steps.4.details.0": "Functionality and performance testing.",
+    "process.steps.4.details.1": "Bug review and fixing.",
+    "process.steps.4.details.2": "User experience testing.",
+    "process.steps.4.details.3": "Final review with the client.",
+
+    "process.steps.5.title": "Launch & Delivery",
+    "process.steps.5.description":
+      "We launch the project and deliver it to you professionally.",
+    "process.steps.5.details.0": "Setting up the production environment.",
+    "process.steps.5.details.1": "Deploying the application online.",
+    "process.steps.5.details.2": "Delivering files and documentation.",
+    "process.steps.5.details.3": "Client training on usage.",
+
+    "process.steps.6.title": "Support & Continuous Improvement",
+    "process.steps.6.description":
+      "We provide support and updates to ensure your project's success.",
+    "process.steps.6.details.0": "Ongoing technical support.",
+    "process.steps.6.details.1": "Regular updates and improvements.",
+    "process.steps.6.details.2": "Adding new features as needed.",
+    "process.steps.6.details.3": "Performance monitoring and consulting.",
+
+    // CTA
+    "process.cta.title": "Ready to Start Your Project?",
+    "process.cta.description":
+      "Let's discuss your ideas and create something amazing together. I'm here to help bring your vision to life.",
+    "process.cta.button": "Let's Get Started",
+
     // Certificates
     "certificates.title": "Certificates & Achievements",
 
@@ -344,6 +402,60 @@ export const translations = {
     "services.logo.title": "تصميم الشعار",
     "services.logo.desc":
       "تصميم شعارات إبداعية تركز على هوية العلامة التجارية والتواصل البصري.",
+
+    // Process
+    "process.title": "عملية تطويري",
+    "process.description":
+      "نهج منظم لتقديم تطبيقات ويب عالية الجودة تلبي أهداف عملك وتفوق توقعات المستخدمين.",
+    "process.steps.1.title": "الاستكشاف والفهم",
+    "process.steps.1.description": "نبدأ بفهم رؤيتك واحتياجاتك وأهداف المشروع.",
+    "process.steps.1.details.0": "اجتماع أولي لمناقشة الأفكار.",
+    "process.steps.1.details.1": "جمع متطلبات المشروع.",
+    "process.steps.1.details.2": "تحليل السوق والمنافسين.",
+    "process.steps.1.details.3": "تحديد نطاق العمل والأهداف.",
+
+    "process.steps.2.title": "التخطيط والتصميم",
+    "process.steps.2.description":
+      "نحول الأفكار إلى خطة عمل واضحة وتصميمات أولية.",
+    "process.steps.2.details.0": "وضع خطة المشروع والجدول الزمني.",
+    "process.steps.2.details.1": "تصميم تجربة المستخدم (UX).",
+    "process.steps.2.details.2": "إنشاء نماذج أولية (Wireframes).",
+    "process.steps.2.details.3": "مراجعة التصميمات مع العميل.",
+
+    "process.steps.3.title": "التطوير والبرمجة",
+    "process.steps.3.description":
+      "نبدأ في بناء التطبيق باستخدام أحدث التقنيات.",
+    "process.steps.3.details.0": "إعداد بيئة التطوير.",
+    "process.steps.3.details.1": "تطوير الواجهة الأمامية والخلفية.",
+    "process.steps.3.details.2": "دمج قواعد البيانات والخدمات.",
+    "process.steps.3.details.3": "اختبارات مستمرة لضمان الجودة.",
+
+    "process.steps.4.title": "الاختبار والمراجعة",
+    "process.steps.4.description": "نختبر التطبيق بدقة لضمان الأداء والجودة.",
+    "process.steps.4.details.0": "اختبار الوظائف والأداء.",
+    "process.steps.4.details.1": "مراجعة الأخطاء وإصلاحها.",
+    "process.steps.4.details.2": "اختبار تجربة المستخدم.",
+    "process.steps.4.details.3": "مراجعة نهائية مع العميل.",
+
+    "process.steps.5.title": "الإطلاق والتسليم",
+    "process.steps.5.description": "نطلق المشروع ونسلمه لك بشكل احترافي.",
+    "process.steps.5.details.0": "إعداد بيئة الإنتاج.",
+    "process.steps.5.details.1": "نشر التطبيق على الإنترنت.",
+    "process.steps.5.details.2": "تسليم الملفات والوثائق.",
+    "process.steps.5.details.3": "تدريب العميل على الاستخدام.",
+
+    "process.steps.6.title": "الدعم والتطوير المستمر",
+    "process.steps.6.description": "نقدم الدعم والتحديثات لضمان نجاح مشروعك.",
+    "process.steps.6.details.0": "دعم فني مستمر.",
+    "process.steps.6.details.1": "تحديثات وتحسينات دورية.",
+    "process.steps.6.details.2": "إضافة ميزات جديدة حسب الحاجة.",
+    "process.steps.6.details.3": "متابعة الأداء وتقديم الاستشارات.",
+
+    // CTA
+    "process.cta.title": "هل أنت مستعد لبدء مشروعك؟",
+    "process.cta.description":
+      "دعنا نناقش أفكارك ونخلق شيئًا رائعًا معًا. أنا هنا لمساعدتك في تحقيق رؤيتك.",
+    "process.cta.button": "لنبدأ",
 
     // Certificates
     "certificates.title": "الشهادات والإنجازات",

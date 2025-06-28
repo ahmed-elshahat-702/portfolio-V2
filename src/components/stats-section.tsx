@@ -4,79 +4,69 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Award, Clock, Code, Coffee, Github, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLanguage } from "./layout/language-provider";
 
 const stats = [
   {
     id: 1,
-    label: "Lines of Code",
+    label: (t: (key: string) => string) => t("stats.linesOfCode.label"),
     value: 250000,
     suffix: "+",
     icon: Code,
     color: "from-blue-500 to-blue-600",
-    description: "Clean, maintainable code written",
+    description: (t: (key: string) => string) =>
+      t("stats.linesOfCode.description"),
   },
-  // {
-  //   id: 2,
-  //   label: "Happy Clients",
-  //   value: 30,
-  //   suffix: "+",
-  //   icon: Users,
-  //   color: "from-green-500 to-green-600",
-  //   description: "Satisfied clients worldwide",
-  // },
   {
     id: 3,
-    label: "Projects Completed",
+    label: (t: (key: string) => string) => t("stats.projectsCompleted.label"),
     value: 6,
     suffix: "+",
     icon: Award,
     color: "from-purple-500 to-purple-600",
-    description: "Successful projects delivered",
+    description: (t: (key: string) => string) =>
+      t("stats.projectsCompleted.description"),
   },
   {
     id: 4,
-    label: "Years Experience",
+    label: (t: (key: string) => string) => t("stats.yearsExperience.label"),
     value: 4,
     suffix: "+",
     icon: Clock,
     color: "from-orange-500 to-orange-600",
-    description: "Years in web development",
+    description: (t: (key: string) => string) =>
+      t("stats.yearsExperience.description"),
   },
   {
     id: 5,
-    label: "Cups of Coffee",
+    label: (t: (key: string) => string) => t("stats.cupsOfCoffee.label"),
     value: 200,
     suffix: "+",
     icon: Coffee,
     color: "from-amber-500 to-amber-600",
-    description: "Fuel for late-night coding",
+    description: (t: (key: string) => string) =>
+      t("stats.cupsOfCoffee.description"),
   },
   {
     id: 6,
-    label: "GitHub Commits",
+    label: (t: (key: string) => string) => t("stats.githubCommits.label"),
     value: 500,
     suffix: "+",
     icon: Github,
     color: "from-gray-500 to-gray-600",
-    description: "Contributions to open source",
+    description: (t: (key: string) => string) =>
+      t("stats.githubCommits.description"),
   },
-  // {
-  //   id: 7,
-  //   label: "5-Star Reviews",
-  //   value: 28,
-  //   suffix: "",
-  //   icon: Star,
-  //   color: "from-yellow-500 to-yellow-600",
-  //   description: "Excellent client feedback",
-  // },
   {
     id: 8,
-    label: "Technologies Mastered",
+    label: (t: (key: string) => string) =>
+      t("stats.technologiesMastered.label"),
     value: 15,
     suffix: "+",
     icon: Zap,
     color: "from-red-500 to-red-600",
-    description: "Modern web technologies",
+    description: (t: (key: string) => string) =>
+      t("stats.technologiesMastered.description"),
   },
 ];
 
@@ -119,6 +109,8 @@ function CountUpAnimation({
 }
 
 export function StatsSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="stats" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -130,11 +122,10 @@ export function StatsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            By the Numbers
+            {t("stats.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Here are some statistics that showcase my journey and achievements
-            in web development.
+            {t("stats.description")}
           </p>
         </motion.div>
 
@@ -171,12 +162,12 @@ export function StatsSection() {
 
                   {/* Label */}
                   <div className="text-sm font-semibold mb-2 group-hover:text-main transition-colors duration-300">
-                    {stat.label}
+                    {stat.label(t)}
                   </div>
 
                   {/* Description */}
                   <div className="text-xs text-muted-foreground leading-relaxed">
-                    {stat.description}
+                    {stat.description(t)}
                   </div>
                 </CardContent>
 
@@ -223,13 +214,10 @@ export function StatsSection() {
           <Card className="border-0 bg-gradient-to-br from-main/10 to-background/10 backdrop-blur-xl shadow-lg max-w-4xl mx-auto">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">
-                Continuous Growth & Learning
+                {t("stats.additionalInfo.title")}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                These numbers represent more than just statistics—they reflect
-                my commitment to excellence, continuous learning, and dedication
-                to delivering outstanding results. Every project is an
-                opportunity to grow and create something meaningful.
+                {t("stats.additionalInfo.description")}
               </p>
             </CardContent>
           </Card>

@@ -113,6 +113,32 @@ export const translations = {
     "about.skills.experienceAndEducation": "Experience & Education",
     "about.skills.skillsAndTechnologies": "Skills & Technologies",
 
+    // Stats
+    "stats.linesOfCode.label": "Lines of Code",
+    "stats.linesOfCode.description":
+      "The total number of lines of code I have written in my programming career.",
+    "stats.projectsCompleted.label": "Projects Completed",
+    "stats.projectsCompleted.description":
+      "The total number of projects I have successfully completed for my clients.",
+    "stats.yearsExperience.label": "Years of Experience",
+    "stats.yearsExperience.description":
+      "The total number of years I have spent in web development.",
+    "stats.cupsOfCoffee.label": "Cups of Coffee",
+    "stats.cupsOfCoffee.description":
+      "The total number of cups of coffee that have helped me code and create.",
+    "stats.githubCommits.label": "GitHub Commits",
+    "stats.githubCommits.description":
+      "The total number of code commits I have made to my GitHub repositories.",
+    "stats.technologiesMastered.label": "Technologies Mastered",
+    "stats.technologiesMastered.description":
+      "The total number of technologies and tools I have mastered throughout my journey.",
+    "stats.title": "By the Numbers",
+    "stats.description":
+      "Here are some statistics that showcase my journey and achievements in web development.",
+    "stats.additionalInfo.title": "Continuous Growth & Learning",
+    "stats.additionalInfo.description":
+      "These numbers represent more than just statistics—they reflect my commitment to excellence, continuous learning, and dedication to delivering outstanding results. Every project is an opportunity to grow and create something meaningful.",
+
     // Projects
     "projects.title": "Featured Projects",
     "projects.viewCode": "View Code",
@@ -266,6 +292,31 @@ export const translations = {
     "about.skills.nursing": "التمريض",
     "about.skills.experienceAndEducation": "الخبرة & التعليم",
     "about.skills.skillsAndTechnologies": "المهارات & التقنيات",
+
+    // Stats
+    "stats.linesOfCode.label": "أسطر الكود",
+    "stats.linesOfCode.description":
+      "عدد أسطر الكود التي كتبتها في مسيرتي البرمجية.",
+    "stats.projectsCompleted.label": "المشاريع المنجزة",
+    "stats.projectsCompleted.description":
+      "عدد المشاريع التي أكملتها بنجاح لعملائي.",
+    "stats.yearsExperience.label": "سنوات الخبرة",
+    "stats.yearsExperience.description": "عدد سنوات الخبرة في تطوير الويب.",
+    "stats.cupsOfCoffee.label": "أكواب القهوة",
+    "stats.cupsOfCoffee.description":
+      "عدد أكواب القهوة التي ساعدتني على البرمجة والإبداع.",
+    "stats.githubCommits.label": "الالتزامات على GitHub",
+    "stats.githubCommits.description":
+      "عدد الالتزامات البرمجية التي أضفتها إلى مستودعات GitHub.",
+    "stats.technologiesMastered.label": "التقنيات المتقنة",
+    "stats.technologiesMastered.description":
+      "عدد التقنيات والأدوات التي أتقنتها خلال رحلتي.",
+    "stats.title": "بالأرقام",
+    "stats.description":
+      "إليك بعض الإحصائيات التي تبرز رحلتي وإنجازاتي في تطوير الويب.",
+    "stats.additionalInfo.title": "نمو مستمر وتعلم",
+    "stats.additionalInfo.description":
+      "هذه الأرقام تمثل أكثر من مجرد إحصائيات - إنها تعكس التزامي بالتميز، والتعلم المستمر، والتفاني في تقديم نتائج متميزة. كل مشروع هو فرصة للنمو وخلق شيء ذو معنى.",
 
     // Projects
     "projects.title": "المشاريع المميزة",

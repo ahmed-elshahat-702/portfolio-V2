@@ -1,21 +1,23 @@
 "use client";
 
+import { useLanguage } from "@/components/layout/language-provider";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import LanguageToggler from "./layout/language-toggler";
 import Logo from "./layout/logo";
-import { ModeToggler } from "./mode-toggler";
+import { ModeToggler } from "./layout/theme-toggler";
 
 const navItems = [
-  { key: "home", href: "#home" },
-  { key: "about", href: "#about" },
-  // { key: "stats", href: "#stats" },
-  { key: "services", href: "#services" },
-  // { key: "process", href: "#process" },
-  { key: "projects", href: "#projects" },
-  // { key: "testimonials", href: "#testimonials" },
-  { key: "CV", href: "#cv" },
-  { key: "certificates", href: "#certificates" },
-  { key: "contact", href: "#contact" },
+  { key: "nav.home", href: "#home" },
+  { key: "nav.about", href: "#about" },
+  // { key: "nav.stats", href: "#stats" },
+  { key: "nav.services", href: "#services" },
+  // { key: "nav.process", href: "#process" },
+  { key: "nav.projects", href: "#projects" },
+  // { key: "nav.testimonials", href: "#testimonials" },
+  { key: "nav.cv", href: "#cv" },
+  { key: "nav.certificates", href: "#certificates" },
+  { key: "nav.contact", href: "#contact" },
 ];
 
 const Header = () => {
@@ -24,6 +26,11 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
+
+  const {
+    t,
+    // , language
+  } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,14 +85,8 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center justify-between px-4 py-2 max-w-6xl mx-auto">
-        {/* Logo and Title */}
-        <Link
-          href="/"
-          className="flex items-center gap-2 select-none text-2xl font-bold"
-        >
-          <Logo />
-          Ahmed
-        </Link>
+        {/* Logo */}
+        <Logo />
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center md:gap-2 lg:gap-6">
@@ -101,7 +102,7 @@ const Header = () => {
               aria-current={activeSection === item.key ? "page" : undefined}
             >
               <span className="relative inline-block">
-                {item.key}
+                {t(item.key)}
                 {activeSection === item.key && (
                   <span className="absolute left-1/2 -bottom-1.5 -translate-x-1/2 w-6 h-1 bg-main rounded-full" />
                 )}
@@ -110,8 +111,11 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Right Section */}
+        {/* Controllers */}
         <div className="flex items-center gap-2">
+          {/* Language Toggler */}
+          <LanguageToggler />
+          {/* Theme Toggler */}
           <ModeToggler />
           {/* Mobile Menu Button */}
           <button

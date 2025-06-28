@@ -1,5 +1,5 @@
 import { Footer } from "@/components/footer";
-import Header from "@/components/header";
+import Header from "@/components/layout/header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import type { Metadata } from "next";
 import { Cairo, Inter } from "next/font/google";

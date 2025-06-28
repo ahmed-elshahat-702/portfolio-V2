@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useLanguage } from "@/components/layout/language-provider";
 
 const Logo = () => {
+  const { language } = useLanguage();
+
   return (
     <Link
       href="/"
@@ -14,13 +17,23 @@ const Logo = () => {
           <Image src="/logo.svg" alt="Logo" fill className="object-cover" />
         </div>
       </div>
-      <Image
-        src="/name-en.svg"
-        alt="name"
-        width={90}
-        height={40}
-        className="hidden md:block"
-      />
+      {language === "en" ? (
+        <Image
+          src="/name-en.svg"
+          alt="name"
+          width={90}
+          height={40}
+          className="hidden md:block"
+        />
+      ) : (
+        <Image
+          src="/name-ar.svg"
+          alt="name"
+          width={90}
+          height={40}
+          className="hidden md:block"
+        />
+      )}
     </Link>
   );
 };

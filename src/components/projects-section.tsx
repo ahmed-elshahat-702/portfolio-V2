@@ -138,7 +138,7 @@ export function ProjectsSection() {
                         className="flex-1 bg-main hover:bg-main/90 text-main-foreground"
                       >
                         <ExternalLink className="mr-2 h-4 w-4" />
-                        {t("projects.demo")}
+                        {t("projects.liveDemo")}
                       </Button>
                     </div>
                   </CardContent>

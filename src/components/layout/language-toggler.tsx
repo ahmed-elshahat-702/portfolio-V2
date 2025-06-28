@@ -34,7 +34,7 @@ export function LanguageToggler() {
           onClick={() => setLanguage("ar")}
           className={language === "ar" ? "bg-main/10 text-main" : ""}
         >
-          <span className="mr-2">eg</span>
+          <span className="mr-2">🇪🇬</span>
           العربية
         </DropdownMenuItem>
       </DropdownMenuContent>

@@ -2,10 +2,10 @@
 
 import { useLanguage } from "@/components/layout/language-provider";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import LanguageToggler from "./layout/language-toggler";
-import Logo from "./layout/logo";
-import { ModeToggler } from "./layout/theme-toggler";
+import { useEffect, useRef, useState } from "react";
+import LanguageToggler from "./language-toggler";
+import Logo from "./logo";
+import { ModeToggler } from "./theme-toggler";
 
 const navItems = [
   { key: "nav.home", href: "#home" },
@@ -23,14 +23,11 @@ const navItems = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = useRef(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
 
-  const {
-    t,
-    // , language
-  } = useLanguage();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,13 +35,16 @@ const Header = () => {
       setIsScrolled(currentScrollY > 50);
 
       if (!isMobileMenuOpen) {
-        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        if (currentScrollY > lastScrollYRef.current && currentScrollY > 100) {
           setIsVisible(false);
-        } else if (currentScrollY < lastScrollY || currentScrollY < 50) {
+        } else if (
+          currentScrollY < lastScrollYRef.current ||
+          currentScrollY < 50
+        ) {
           setIsVisible(true);
         }
       }
-      setLastScrollY(currentScrollY);
+      lastScrollYRef.current = currentScrollY;
 
       let found = false;
       for (let i = navItems.length - 1; i >= 0; i--) {
@@ -60,7 +60,7 @@ const Header = () => {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY, isMobileMenuOpen]);
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     if (isMobileMenuOpen) setIsVisible(true);
@@ -175,7 +175,7 @@ const Header = () => {
                   }}
                 >
                   <span className="relative inline-block">
-                    {item.key}
+                    {t(item.key)}
                     {activeSection === item.key && (
                       <span className="absolute left-1/2 -bottom-1.5 -translate-x-1/2 w-6 h-1 bg-main rounded-full" />
                     )}

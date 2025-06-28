@@ -18,13 +18,6 @@ export const translations = {
 
     // Hero Section
     "hero.greeting": "Hi, I'm Ahmed",
-    "hero.titles": [
-      "Full-stack Developer",
-      "Logo Designer",
-      "Problem Solver",
-      "Creative Thinker",
-      "Nurse",
-    ],
     "hero.description":
       "Passionate about creating modern web applications with cutting-edge technologies. Specialized in React, Node.js, and cloud solutions.",
     "hero.viewProjects": "See Projects",
@@ -293,13 +286,6 @@ export const translations = {
 
     // Hero Section
     "hero.greeting": "مرحباً، أنا أحمد",
-    "hero.titles": [
-      "مطور ويب متكامل",
-      "مصمم شعارات",
-      "حل المشكلات",
-      "مفكر إبداعي",
-      "ممرض",
-    ],
     "hero.description":
       "شغوف بإنشاء تطبيقات ويب حديثة باستخدام أحدث التقنيات. متخصص في React و Node.js والحلول السحابية.",
     "hero.viewProjects": "عرض المشاريع",

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github, Star } from "lucide-react";
 import { useLanguage } from "@/components/layout/language-provider";
 import Image from "next/image";
+import { BackgroundElements } from "./background-elements";
 
 const projects = [
   {
@@ -62,7 +63,8 @@ export function ProjectsSection() {
   const otherProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
+    <section id="projects" className="py-20 bg-muted/30 relative">
+      <BackgroundElements />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

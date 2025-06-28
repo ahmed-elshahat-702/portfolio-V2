@@ -13,6 +13,7 @@ import {
 import { Button, buttonVariants } from "./ui/button";
 import Link from "next/link";
 import { useLanguage } from "@/components/layout/language-provider";
+import { BackgroundElements } from "./background-elements";
 
 const processSteps = [
   {
@@ -105,7 +106,8 @@ export function ProcessSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="process" className="py-20">
+    <section id="process" className="py-20 relative">
+      <BackgroundElements />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

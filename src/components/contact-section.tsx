@@ -23,6 +23,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import { useLanguage } from "./layout/language-provider";
+import { BackgroundElements } from "./background-elements";
 
 // Zod schema for form validation
 const formSchema = z.object({
@@ -141,7 +142,8 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 relative">
+      <BackgroundElements />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

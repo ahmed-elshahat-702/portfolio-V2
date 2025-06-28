@@ -63,7 +63,73 @@ function BackgroundElementsComponent() {
         </svg>
       </motion.div>
 
-      {/* Particles (خفيفة ورجعت 4 منهم فقط) */}
+      {/* Programming Symbols */}
+      {/* <motion.div
+        animate={{ y: [0, 60, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-60 left-10 opacity-20 will-change-transform"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          className="text-primary"
+        >
+          <text
+            x="0"
+            y="24"
+            fontSize="28"
+            fontFamily="monospace"
+            fontWeight="bold"
+            fill="currentColor"
+          >
+            {"<"}
+          </text>
+        </svg>
+      </motion.div>*/}
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-10 right-10 opacity-20 will-change-transform"
+      >
+        <svg width="32" height="32" viewBox="0 0 32 32" className="text-golden">
+          <text
+            x="0"
+            y="24"
+            fontSize="28"
+            fontFamily="monospace"
+            fontWeight="bold"
+            fill="currentColor"
+          >
+            {";"}
+          </text>
+        </svg>
+      </motion.div>
+      {/* <motion.div
+        animate={{ x: [0, 10, 0] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/2 left-5 opacity-20 will-change-transform"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          className="text-primary"
+        >
+          <text
+            x="0"
+            y="24"
+            fontSize="28"
+            fontFamily="monospace"
+            fontWeight="bold"
+            fill="currentColor"
+          >
+            {"{"}
+          </text>
+        </svg>
+      </motion.div> */}
+
+      {/* Particles */}
       {[...Array(4)].map((_, i) => (
         <motion.div
           key={i}

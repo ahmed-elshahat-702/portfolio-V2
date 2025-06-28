@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Calendar, Earth, Pen, Server } from "lucide-react";
 import { useLanguage } from "./layout/language-provider";
+import { BackgroundElements } from "./background-elements";
 
 const stats = [
   {
@@ -181,7 +182,9 @@ export function AboutSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-20 bg-muted/30 relative">
+      <BackgroundElements />
+
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

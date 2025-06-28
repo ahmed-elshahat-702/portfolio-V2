@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Code, Earth, Palette, Server } from "lucide-react";
 import { useLanguage } from "./layout/language-provider";
+import { BackgroundElements } from "./background-elements";
 
 const services = [
   {
@@ -39,7 +40,8 @@ const services = [
 export function ServicesSection() {
   const { t } = useLanguage();
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-20 relative">
+      <BackgroundElements />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -2,13 +2,13 @@ import { Footer } from "@/components/footer";
 import Header from "@/components/layout/header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import type { Metadata } from "next";
-// import { Cairo, Inter } from "next/font/google";
+import { Cairo, Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { LanguageProvider } from "@/components/layout/language-provider";
 
-// const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-// const cairo = Cairo({ subsets: ["arabic"], variable: "--font-cairo" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const cairo = Cairo({ subsets: ["arabic"], variable: "--font-cairo" });
 
 export const metadata: Metadata = {
   title: "Ahmed - Full Stack Developer",
@@ -24,8 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        // ${cairo.variable} ${inter.variable}
         className={`
+        ${cairo.variable} ${inter.variable}
           antialiased`}
       >
         <ThemeProvider

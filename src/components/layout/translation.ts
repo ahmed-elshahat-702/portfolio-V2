@@ -217,6 +217,8 @@ export const translations = {
     "projects.liveDemo": "Live Demo",
     "projects.items.recipeHub.description":
       "A full-stack recipe sharing platform with authentication, MongoDB database, and responsive design.",
+    "projects.items.TickDone.description":
+      "A full-stack clean and modern task management dashboard with listing, categories, Pomodoro timer, Notifications, Authentication, Database and more.",
     "projects.items.randomAdvice.description":
       "A simple app that fetches and displays random advice using an external API.",
     "projects.items.hangmanGame.description":
@@ -477,6 +479,8 @@ export const translations = {
     "projects.liveDemo": "عرض مباشر",
     "projects.items.recipeHub.description":
       "منصة مشاركة وصفات متكاملة مع مصادقة، قاعدة بيانات MongoDB، وتصميم متجاوب.",
+    "projects.items.TickDone.description":
+      "منصة لتنظيم المهام مع تصنيفات، أقسام، مؤقت بومودورو، إشعارات، مصادقة، قاعدة بيانات MongoDB، وتصميم متجاوب.",
     "projects.items.randomAdvice.description":
       "تطبيق بسيط يقوم بجلب وعرض نصائح عشوائية باستخدام واجهة برمجة التطبيقات الخارجية.",
     "projects.items.hangmanGame.description":

@@ -12,6 +12,17 @@ import { BackgroundElements } from "./background-elements";
 const projects = [
   {
     id: 1,
+    title: "Tick Done",
+    description: (t: (key: string) => string) =>
+      t("projects.items.TickDone.description"),
+    image: "/projects/tick-done.png?height=300&width=400",
+    technologies: ["Next", "MongoDB", "Auth.js", "Tailwind CSS"],
+    github: "https://github.com/ahmed-elshahat-702/tick-done",
+    demo: "https://bondok-tick-done.vercel.app",
+    featured: true,
+  },
+  {
+    id: 2,
     title: "Recipe Hub",
     description: (t: (key: string) => string) =>
       t("projects.items.recipeHub.description"),
